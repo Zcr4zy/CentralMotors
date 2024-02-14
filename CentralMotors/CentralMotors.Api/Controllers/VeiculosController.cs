@@ -149,7 +149,6 @@ namespace CentralMotors.Api.Controllers
             veiculo.Tipo = null;
             veiculo.TipoTransmissao = null;
             veiculo.TipoCombustivel = null;
-            veiculo.Modelo.Fabricante = null;
             _context.Veiculos.Add(veiculo);
             await _context.SaveChangesAsync();
 
