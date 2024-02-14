@@ -1,0 +1,44 @@
+﻿@model CentralMotors.Models.Veiculo
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6">
+                <img class="card-img-top mb-5 mb-md-0" src="@Model.Foto1" width="430" height="400" alt="..." style="border: 2px solid #3498db; border-radius: 10px;" />
+            </div>
+            <div class="col-md-6">
+                <h1 class="display-5 fw-bolder">@Model.Modelo.Fabricante.Nome - @Model.Modelo.Nome</h1>
+                <div class="fs-5 mb-5">
+                    <span c>@Model.Valor.ToString("C")</span>
+                </div>
+                <p class="">Especificação: @Model.Tipo.Nome<br />Cor: @Model.Cor.Nome<br />Ano de Fabricação: @Model.AnoFabricacao<br />Ano do Modelo: @Model.AnoModelo<br />Km Rodados: @Model.KmRodados<br />Moto: @Model.Motor<br />Combustível: @Model.TipoCombustivel.Nome<br />Transmissão: @Model.TipoTransmissao.Nome<br />Localização: @Model.Localizacao</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function alternarImagens() {
+            var imgElement = $(".card-img-top");
+            var currentSrc = imgElement.attr("src");
+
+            if (currentSrc === "@Model.Foto1") {
+                imgElement.attr("src", "@Model.Foto2");
+            } else {
+                imgElement.attr("src", "@Model.Foto1");
+            }
+        }
+
+        setInterval(alternarImagens, 3000); 
+    });
+</script>
+<div>
+    <a asp-action="Index" style="font-size: 15px; text-decoration: none; color: #007bff; border: 2px solid #007bff; border-radius: 8px; padding: 5px; display: inline-block; display:grid;place-items:center;">Retornar</a>
+</div>

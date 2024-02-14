@@ -1,0 +1,51 @@
+﻿@model IEnumerable<CentralMotors.Models.Veiculo>
+
+
+<link rel="stylesheet" href="~/css/styles.css" />
+<link rel="stylesheet" href="~/css/Index.css" />
+<body style="margin-top:120px;background-color:#f5f5f5">
+    <header class="py-5" style="background-color: rgb(7,65,173); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">CENTRALMOTORS</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Seja Bem-Vindo ao CentralMotors!</p>
+            </div>
+        </div>
+    </header>
+    @foreach (var item in Model)
+    {
+
+    
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">À Venda</div>
+                        <img class="card-img-top" src="@item.Foto1" alt="..." />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">@item.Modelo.Nome</h5>
+                                <div class="d-flex flex-column text-dark mb-2">
+                                    <div class="bi-star-fill">@item.AnoFabricacao</div>
+                                    <div class="bi-star-fill">@item.Motor</div>
+                                    <div class="bi-star-fill">@item.TipoTransmissao.Nome</div>
+                                    <div class="bi-star-fill">@item.TipoCombustivel.Nome</div>
+                                    <div class="bi-star-fill">@item.Localizacao</div>
+                                </div>
+                                <span c>@item.Valor.ToString("C")</span>
+                                
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center" style="font-size:15px;">@Html.ActionLink("Ver Mais", "Detalhes", new { id = item.VeiculoId }, new { @class = "link-sem-sublinhado" })</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+  }  
+</body>
+

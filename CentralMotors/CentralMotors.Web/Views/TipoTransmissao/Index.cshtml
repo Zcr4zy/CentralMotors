@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CentralMotors.Models.TipoTransmissao>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="font-size:40px">Tipos de Transmissão</h1>
+<link rel="stylesheet" href="~/css/Index.css" />
+<body style="background:url(/IMG/logo-virada.png) no-repeat fixed center center; background-size: 20%;margin-top:120px;">
+
+    <p style="text-align:center; font-size:24px">
+        <a asp-action="Create" style="text-decoration: none;color:limegreen">Adicionar Tipo de Transmissão</a>
+</p>
+    <table class="table" style="background-color:rgba(192, 192, 192, 0.47);">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.TipoTransmissaoId }, new { @class = "link-sem-sublinhado" }) |
+                        @Html.ActionLink("Remover", "Delete", new { id = item.TipoTransmissaoId }, new { @class = "link-sem-sublinhadodelete" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>

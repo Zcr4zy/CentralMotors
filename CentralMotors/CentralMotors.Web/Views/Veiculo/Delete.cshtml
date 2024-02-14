@@ -1,0 +1,107 @@
+﻿@model CentralMotors.Models.Veiculo
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<body style="background:url(/IMG/logo-virada.png) no-repeat fixed center center; background-size: 20%;margin-top:120px;">
+
+<h1>Excluir</h1>
+
+    <h3>Você tem Certeza que Deseja Excluir este Veículo?</h3>
+    <div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+                <p>ID do Veículo</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VeiculoId)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>Ano do Modelo</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnoModelo)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>Ano de Fabricação</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AnoFabricacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>Km Rodados</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KmRodados)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Motor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Motor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Localizacao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Localizacao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Foto1)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Foto1)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>2ªFoto</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Foto2)
+        </dd>
+        <dt class = "col-sm-2">
+                <p>Cor</p>
+            </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cor.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Modelo.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo)
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Tipo.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoCombustivel)
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.TipoCombustivel.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoTransmissao)
+        </dt>
+        <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.TipoTransmissao.Nome)
+        </dd>
+    </dl>
+
+        <form asp-action="Delete">
+            <br />
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            <a asp-action="Index" style="font-size: 15px; text-decoration: none; color: #007bff; border: 2px solid #007bff; border-radius: 8px; padding: 5px; display: inline-block;">Retornar</a>
+
+        </form>
+</div>
+</body>

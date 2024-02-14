@@ -1,0 +1,85 @@
+﻿@model IEnumerable<CentralMotors.Models.Veiculo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 style="font-size:40px">Veículos</h1>
+<link rel="stylesheet" href="~/css/Index.css" />
+<body style="background:url(/IMG/logo-virada.png) no-repeat fixed center center; background-size: 20%;margin-top:120px;">
+
+    <p style="text-align:center; font-size:24px;text-decoration: none;">
+        <a asp-action="Create" style="text-decoration: none;color:limegreen">Adicionar Veículo</a>
+</p>
+    <table class="table" style="background-color:rgba(192, 192, 192, 0.47);">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoFabricacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KmRodados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Motor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoCombustivel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoTransmissao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoFabricacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KmRodados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Motor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cor.Nome)
+            </td>
+            <td>
+                        @Html.DisplayFor(modelItem => item.Modelo.Nome)
+            </td>
+            <td>
+                        @Html.DisplayFor(modelItem => item.Tipo.Nome)
+            </td>
+            <td>
+                        @Html.DisplayFor(modelItem => item.TipoCombustivel.Nome)
+            </td>
+            <td>
+                        @Html.DisplayFor(modelItem => item.TipoTransmissao.Nome)
+            </td>
+            <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.VeiculoId }, new { @class = "link-sem-sublinhado" })  |
+                        @Html.ActionLink("Remover", "Delete", new { id = item.VeiculoId }, new { @class = "link-sem-sublinhadodelete" })
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>

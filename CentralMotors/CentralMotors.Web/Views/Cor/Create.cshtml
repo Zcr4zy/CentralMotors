@@ -1,0 +1,38 @@
+﻿@model CentralMotors.Models.Cor
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Adicionar Cor</h1>
+<body style="background:url(/IMG/logo-virada.png) no-repeat fixed center center; background-size: 20%;margin-top:120px;">
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">ID da Nova Cor</label>
+                <input asp-for="CorId" class="form-control" />
+                <span asp-validation-for="CorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div><br /><br />
+            <div class="form-group">
+                <input type="submit" value="Adicionar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <br />
+        <a asp-action="Index" style="font-size: 15px; text-decoration: none; color: #007bff; border: 2px solid #007bff; border-radius: 8px; padding: 5px; display: inline-block;">Retornar</a>
+    </div>
+</body>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

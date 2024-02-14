@@ -1,0 +1,6 @@
+@CentralMotors.Api_HostAddress = http://localhost:5160
+
+GET {{CentralMotors.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

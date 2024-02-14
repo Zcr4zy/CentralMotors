@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralMotors.Api", "CentralMotors.Api\CentralMotors.Api.csproj", "{578E0F26-E328-435D-ADB2-1516718C0E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralMotors.Web", "CentralMotors.Web\CentralMotors.Web.csproj", "{8F026F51-5F48-4B6E-824E-0296F22C4FAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{578E0F26-E328-435D-ADB2-1516718C0E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{578E0F26-E328-435D-ADB2-1516718C0E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{578E0F26-E328-435D-ADB2-1516718C0E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{578E0F26-E328-435D-ADB2-1516718C0E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F026F51-5F48-4B6E-824E-0296F22C4FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F026F51-5F48-4B6E-824E-0296F22C4FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F026F51-5F48-4B6E-824E-0296F22C4FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F026F51-5F48-4B6E-824E-0296F22C4FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF2312D3-3D2D-4C53-8E40-3B40EBB43410}
+	EndGlobalSection
+EndGlobal
